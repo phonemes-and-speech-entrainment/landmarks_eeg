@@ -1,5 +1,13 @@
+%{
+
+Extract epochs per participant, channel,stream and trial number, and order
+them in an ascending fashion based on the event code
+
+(c) Oana Cucu, October 2019. oana.cucu@bristol.ac.uk
+%}
+
 clear;
-address='/Users/gigel/Documents/Speech EEG/Experiment 3 (final)';
+address='/Users/gigel/Documents/Speech EEG/Experiment 3 A';
 addpath('/Users/gigel/Documents/MATLAB/eeglab13_6_5b');
 [ALLEEG EEG CURRENTSET ALLCOM] = eeglab;
 

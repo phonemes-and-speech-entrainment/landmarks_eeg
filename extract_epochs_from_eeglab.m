@@ -1,5 +1,11 @@
+%{
+Pre-processesing script for raw EEG data: low-pass filter
+50 Hz,average reference, epoching; uses EEGLAB.
+
+(c) Oana Cucu, October 2019. oana.cucu@bristol.ac.uk
+%}
+
 addpath('/Users/gigel/Documents/MATLAB/eeglab13_6_5b');
-%here cd to folder where .mul files are, if on computer
 files=dir('*.eeg');
 h=waitbar(0,'Please wait...');
 
