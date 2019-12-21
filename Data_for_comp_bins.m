@@ -1,3 +1,5 @@
+%split itc and power data at 4, 8, 12 and 16 Hz and extract neighbouring bins, 2 Hz in each direction
+
 clearvars;
 load('itc_and_pow_for_stats_16subj.mat');
 
