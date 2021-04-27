@@ -11,13 +11,10 @@ address='/Users/gigel/Documents/Speech EEG/Experiment 3 A';
 addpath('/Users/gigel/Documents/MATLAB/eeglab13_6_5b');
 [ALLEEG EEG CURRENTSET ALLCOM] = eeglab;
 
-files=dir('*.set'); %use before running the code
+files=dir('*.set'); %use .set files created with EEGLAB (pre-processed data: filter, ICA)
 
-%load all data for each participant
+%load data for each participant
 for i=1:length(files)
-    %if i==2 || i==9 || i==10 || i==12
-    %    continue
-    %end
     EEG=pop_loadset(files(i).name, address);
     [ALLEEG EEG CURRENTSET]=eeg_store(ALLEEG, EEG);
 end;
@@ -40,8 +37,8 @@ for i = 1:n
     Data(i,:,:,:)=ALLEEG(i).data;
 end;
 
-%extract information about each event (trial number, event code) for each
-%participant
+%extract information about each event (trial number, event code) for each participant
+
 Eveinfo=zeros(n,p);
 
 for i = 1:n
@@ -73,8 +70,7 @@ for i = 1:n
     Data2(i,:,:,:)=Data(i,:,:,indx);
 end;
 
-%sort data matrix in streams per trials and permute to get that specific
-%order
+%sort data matrix in streams per trials and permute to get that specific dimension order
 Data3=reshape(Data2, size(Data2,1), size(Data2, 2), size(Data2,3), 10, size(Data2,4)/10);
 
 Datanew=permute(Data3,[1 2 3 5 4]);
