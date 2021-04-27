@@ -1,7 +1,7 @@
 %{
 
-Extract epochs per participant, channel,stream and trial number, and order
-them in an ascending fashion based on the event code
+Extract epochs per participant, channel, stream and trial number, and order
+them ascendingly based on the event code
 
 (c) Oana Cucu, October 2019. oana.cucu@bristol.ac.uk
 %}
