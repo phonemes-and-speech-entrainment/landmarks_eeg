@@ -8,7 +8,7 @@ ordered by condition using the 'sort_by_events' script.
 %}
 
 clearvars;
-addpath('/Users/gigel/Documents/Speech EEG/Code /Entrainment_analysis/Experiment 2');
+addpath('/Users/gigel/Documents/Speech EEG/Code /Entrainment_analysis/Experiment 2'); %add path of remove_noise.m function
 
 %load data
 load('Data_16_subjects.mat');
@@ -217,7 +217,7 @@ legend('da','ta');
 meanchanpow=squeeze(mean(evoked_without_noise,2));
 %}
 
-%% plot ITC and Evoked Power as average and also for individual subjects
+%% plot average ITC and Evoked Power but also for individual subjects
 
 itc_all=squeeze(mean(mean(itc,4),2));
 evoked_all=squeeze(mean(mean(evoked_without_noise,4),2));
